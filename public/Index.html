@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <link href="icons/fontawesome-free-6.6.0-web/css/all.css">
+    <link href="icons/fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet" />
+    <link href="icons/fontawesome-free-6.6.0-web/css/brands.css" rel="stylesheet" />
+    <link href="icons/fontawesome-free-6.6.0-web/css/solid.css" rel="stylesheet" />
+    <title>Weather Info</title>
+</head>
+
+<body>
+
+    <h1 class="text">Weather Info</h1>
+    <div class="container">
+
+        <div class="container-left">
+            <div class="content">
+                <div id="weatherdata-left">
+                    <h2 id="weather-name"> </h2>
+                    <p id="local-time"></p>
+                    <img id="weather-img">
+                    <p id="condition"></p>
+                    <p id="weather-temp"></p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="content">
+                <Label id="city-lbl" for="getcity">Enter City Name:</Label>
+                <input id="getcity" type="text" value="India">
+                <button id="getweather" onclick="getweather()" class="fa-solid fa-magnifying-glass fa-lg"></button>
+                <div id="weather">
+
+                    <p id="details"></p>
+
+                    <p id="humidity"></p>
+                    <p id="wind"></p
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    </div>
+    <script src="newjs.js"></script>
+</body>
+
+</html>
