@@ -1,0 +1,13 @@
+git config user.name "Prashik Ballal"
+git config user.email "kken9687@gmail.com"
+
+
+
+cd path/to/your/project
+git init
+git add .
+git commit -m "Initial commit"
+# On GitHub, create a new repository and copy the URL
+git remote add origin https://github.com/your-username/your-repository-name.git
+git push -u origin master
+# Or use `main` if that's the default branch

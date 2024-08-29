@@ -1,7 +1,7 @@
 body{
     margin: 0%;
     padding: 10px;
-    background-color:#050a30;
+    background-color:#d4f1f4;
     font-family:Arial, Helvetica, sans-serif;
     font-size: x-large;
 }
@@ -20,7 +20,8 @@ body{
     outline: none;
     vertical-align: middle;
     border: 0px;
-    color: black;
+    color: white;
+    background-color: #050a30;
 }
 
 .text{
@@ -28,30 +29,33 @@ body{
     text-align: center;
     margin-top: 5%;
     margin: 0%;
-    color: white;
+    color: black;
 }
 
 .container{
     margin: 10%;
     margin-top: 5%;
-    height: 500px;
+    height: 650px;
     width: 100%;
-    background-color: #050a30;
+    background-color: #d4f1f4;
     display: flex;
-    background: linear-gradient(to right, #050a30 0%, 10%,#d4f1f4 40%,#050a30 70%,#050a30 100%);
+    background: linear-gradient(to right, #d4f1f4 0%, 10%,#050a30 40%,#d4f1f4 70%,#d4f1f4 100%);
 }
 .container-left{
-    height: 500px;
+    height: 650px;
     width: 40%;
     background-color: #7ec8e3;  
     border-radius: 50px;
+    order: 2;
 
 }
 .container-right{
-    height: 500px;
+    height: 650px;
     width: 40%;
-    background-color: #d4f1f4;
+    background-color: #050a30;
     float: left;
+    color: white;
+    order: 1;
 
 }
 .content-right{
@@ -66,13 +70,15 @@ body{
 #city-lbl{
     margin: 20px;
     margin-top: 150px; 
+    margin-left: 0px;
     font-size: large;
+   
 }
 #getcity{
     border: 1px rgb(61, 76, 86);
     border-radius: 15px;
     outline: none;
-    width: 300px;
+    width: 85%;
     height: 25px;
 }
 #weatherdata-left{
@@ -80,8 +86,9 @@ body{
 }
 #weather-img{
     margin-top: 80px;
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: auto;
+
 }
 #weather{
     padding-left: 20px;
@@ -91,5 +98,32 @@ body{
     text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: large;
+    }
+    .container{
+        height: auto;
+        width: 75;
+        display: flex;
+        flex-direction:column;
+    background: linear-gradient(to bottom,#d4f1f4 0%,#050a30 85% ,#d4f1f4 90%);
 
-
+    }
+    .container-right{
+        width: auto;
+        height: 20%;
+    }
+    .container-left{
+        width: auto;
+        height: auto;
+    }
+    #getcity{
+        margin-top: 15px;
+    }
+    #city-lbl{
+        margin-left: 0px;
+    }
+   
+}
+    
