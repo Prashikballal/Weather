@@ -105,9 +105,11 @@ body{
     .container{
         height: auto;
         width: 75;
+        margin-left: 0px;
         display: flex;
         flex-direction:column;
-    background: linear-gradient(to bottom,#d4f1f4 0%,#050a30 85% ,#d4f1f4 90%);
+        background: linear-gradient(to bottom,#d4f1f4 0%,#050a30 85% ,#d4f1f4 90%);
+
 
     }
     .container-right{
