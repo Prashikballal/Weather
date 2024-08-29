@@ -108,7 +108,7 @@ body{
         margin-left: 0px;
         display: flex;
         flex-direction:column;
-        background: linear-gradient(to bottom,#d4f1f4 0%,#050a30 85% ,#d4f1f4 90%);
+        background: linear-gradient(to bottom,#050a30 0%,#050a30 94% ,#d4f1f4 95%);
 
 
     }
@@ -125,6 +125,13 @@ body{
     }
     #city-lbl{
         margin-left: 0px;
+    }
+    #weatherdata-left{
+        padding-left: 0px;
+    }
+    .content-left{
+        background-color:#7ec8e3;
+        border-radius: 50px;
     }
    
 }
