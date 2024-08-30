@@ -108,7 +108,7 @@ body{
         margin-left: 0px;
         display: flex;
         flex-direction:column;
-        background: linear-gradient(to bottom,#050a30 0%,#050a30 94% ,#d4f1f4 95%);
+        background: linear-gradient(to bottom,#050a30 0%,#050a30 94% ,#d4f1f4 94.01%);
 
 
     }

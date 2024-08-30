@@ -1,31 +1,52 @@
 
 
 
-let getweather = async()=>{
-    const apikey = 'd1c8c98c8b3a42e5ac9160428232907';
-    let city = document.getElementById('getcity').value; // City value from text box
-    let name = document.getElementById('weather-name');
-    let time = document.getElementById('local-time');
-    let img = document.getElementById('weather-img');
-    let temp = document.getElementById('weather-temp');
-    let condition = document.getElementById('condition');
-    let humidity = document.getElementById('humidity');
-    let wind = document.getElementById('wind');
-    const weatherurl = `https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}&aqi=no`;
-    let res = await fetch(weatherurl); // fetching data 
-    let weartherdata = await res.json() ; // converting data in json format
-    let apiDateTime = weartherdata.location.localtime;
-    console.log(weartherdata);
-    name.innerHTML=weartherdata.location.name;
-    time.innerHTML=formatDateTime(apiDateTime);
-    condition.innerHTML=weartherdata.current.condition.text;
-    img.src = weartherdata.current.condition.icon;
-    temp.innerHTML = `Temperature is ${weartherdata.current.temp_c}\u00B0 C`;
-    document.getElementById('details').innerHTML = `More Details`;
-    humidity.innerHTML = `Humidity : ${weartherdata.current.humidity}`;
-    wind.innerHTML = `Wind : ${weartherdata.current.wind_kph} kph`;
+let getweather = async () => {
+    try {
+        const apikey = 'd1c8c98c8b3a42e5ac9160428232907';
+        let city = document.getElementById('getcity').value; // City value from text box
+        let name = document.getElementById('weather-name');
+        let time = document.getElementById('local-time');
+        let img = document.getElementById('weather-img');
+        let temp = document.getElementById('weather-temp');
+        let condition = document.getElementById('condition');
+        let humidity = document.getElementById('humidity');
+        let wind = document.getElementById('wind');
+        let details = document.getElementById('details');
+       
+        
+        if(!city){
+            
+            window.alert("Please enter city name");
+        }
 
-    
+        const weatherurl = `https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}&aqi=no`;
+        let res = await fetch(weatherurl); // fetching data 
+        if(!res.ok){
+            alert('City not found please enter correct city')
+            throw new error(`HTTP error Status ${res.status}`);
+        }
+        let weartherdata = await res.json(); // converting data in json format
+
+       
+        let apiDateTime = weartherdata.location.localtime;
+
+        name.innerHTML = weartherdata.location.name;
+        time.innerHTML = formatDateTime(apiDateTime);
+        condition.innerHTML = weartherdata.current.condition.text;
+        img.src = weartherdata.current.condition.icon;
+        temp.innerHTML = `Temperature is ${weartherdata.current.temp_c}\u00B0 C`;
+        details.innerHTML = `More Details`;
+        humidity.innerHTML = `Humidity : ${weartherdata.current.humidity}`;
+        wind.innerHTML = `Wind : ${weartherdata.current.wind_kph} kph`;
+    }
+    catch(error)
+    {
+        console.log(error);
+
+    }
+
+
 }
 
 function formatDateTime(apiDateTime) {
