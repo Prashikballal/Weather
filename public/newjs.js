@@ -20,6 +20,7 @@ let apidata = async () =>{
             window.alert("Please enter city name");
             return null;    // break out of function
         }
+        
 
         const weatherurl = `https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}&aqi=no`; 
         let res = await fetch(weatherurl); // fetching data 
